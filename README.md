@@ -66,7 +66,7 @@
 ### 4、使用Redux的步骤
 下面我们以一个计数器为例，实现react结合redux完成计数器的效果。
 
-###### (1)、创建组件
+##### (1)、创建组件
 
 在 `src` 文件夹下创建一个名为 `components` 的文件夹，用来存放项目的自定义组件，在`components` 文件夹下创建一个 `Counter.js` 文件，代码如下：
 
@@ -90,8 +90,8 @@ Counter.js
 			return(
 				<div>
 					<h2>{this.props.counter}</h2>
-					<button onClick={this.props.increase}>增加+</button>
-					<button onClick={this.props.decrease}>减少-</button>
+					<button onClick={this.props.increase}>增加</button>
+					<button onClick={this.props.decrease}>减少</button>
 				</div>
 			) 
 	    
@@ -119,7 +119,7 @@ Counter.js
 `Counter.js` 的头部通过 `import { increaseAction, decreaseAction } from '../actions.js`语句引入 `increaseAction` 和 `decreaseAction`，`actions.js` 文件代码具体见下一步操作。
 
 
-###### (2)、编写actions.js、reducer.js
+##### (2)、编写actions.js、reducer.js
 
 在 `src` 文件夹下创建两个 `js` 文件，分别为 `actions.js` 和 `reducer.js`,具体代码如下：
 
@@ -155,7 +155,7 @@ reducer.js
 	
 	export default counterReducer;
 
-###### (3)、修改index.js、App.js
+##### (3)、修改index.js、App.js
 
 此时要将 `reducer` 处理返回的 `state` 值放入 `store` 树上，并且达到渲染 `Counter` 组件，因此要修改 `index.js` 和 `App.js` 文件代码，具体代码如下：
 
@@ -208,12 +208,12 @@ App.js
 启动项目后，会弹出新的浏览器 `localhost://3000` 页面，此时页面是这样的：
 ![redux](https://github.com/lijinping2017/react-redux-demo/raw/master/redux-images/redux.jpg)
 
-出现这样的页面就说明项目没有错误，达到了我们想要的效果，这时要验证一下点击**增加+**按钮数值是否**加1**，点击**减少-**按钮时数值是否**减1**，测试结果如下：
+出现这样的页面就说明项目没有错误，达到了我们想要的效果，这时要验证一下点击**增加**按钮数值是否**加1**，点击**减少**按钮时数值是否**减1**，测试结果如下：
 
-点击**增加+**按钮：
+点击**增加**按钮：
 ![increase](https://github.com/lijinping2017/react-redux-demo/raw/master/redux-images/add.jpg)
 
-点击**减少-**按钮：
+点击**减少**按钮：
 
 ![decrease](https://github.com/lijinping2017/react-redux-demo/raw/master/redux-images/sub.jpg)
 
